@@ -2,6 +2,12 @@
   {{#if errorThrown}}
     <div class="lazy-image-error-message">{{defaultErrorText}}</div>
   {{else}}
+    <div class="lazy-image-placeholder">{{yield}}</div>
+  {{/if}}
+{{else}}
+  {{#if errorThrown}}
+    <div class="lazy-image-error-message">{{defaultErrorText}}</div>
+  {{else}}
     <div class="lazy-image-placeholder">
       <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
        width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
@@ -20,12 +26,6 @@
         </path>
       </svg>
     </div>
-  {{/if}}
-{{else}}
-  {{#if errorThrown}}
-    <div class="lazy-image-error-message">{{defaultErrorText}}</div>
-  {{else}}
-    <div class="lazy-image-placeholder"></div>
   {{/if}}
 {{/if}}
 
